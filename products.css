@@ -162,7 +162,7 @@ h3 {
     touch-action: manipulation;
   }
   
-  .button-85:before {
+.button-85:before {
     content: "";
     background: linear-gradient(
       45deg,
@@ -188,9 +188,9 @@ h3 {
     animation: glowing-button-85 20s linear infinite;
     transition: opacity 0.3s ease-in-out;
     border-radius: 10px;
-  }
+}
   
-  @keyframes glowing-button-85 {
+@keyframes glowing-button-85 {
     0% {
       background-position: 0 0;
     }
@@ -200,9 +200,9 @@ h3 {
     100% {
       background-position: 0 0;
     }
-  }
+}
   
-  .button-85:after {
+.button-85:after {
     z-index: -1;
     content: "";
     position: absolute;
@@ -212,4 +212,36 @@ h3 {
     left: 0;
     top: 0;
     border-radius: 10px;
-  }
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.quantity-selector button {
+    background-color: #41a7f5;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity-selector button:hover {
+    background-color: #1e90ff;
+}
+
+.quantity-selector .quantity {
+    font-size: 16px;
+    font-weight: bold;
+}

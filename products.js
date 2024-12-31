@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
     button.textContent = 'Ajouter au panier';
     button.style.display = 'none';
     card.appendChild(button);
-
     card.addEventListener('mouseover', () => {
       currentPrice.style.display = 'none';
       button.style.display = 'block';
@@ -69,5 +68,69 @@ document.addEventListener("DOMContentLoaded", () => {
       button.style.display = 'none';
     });
   });
+const cartIcon = document.querySelector('a img[alt="Cart"]');
+let cartCount = 0;
+const cartCounter = document.createElement('span');
+cartCounter.style.position = 'absolute';
+cartCounter.style.top = '0';
+cartCounter.style.right = '1';
+cartCounter.style.backgroundColor = 'red';
+cartCounter.style.color = 'white';
+cartCounter.style.borderRadius = '50%';
+cartCounter.style.padding = '2px 6px';
+cartCounter.style.fontSize = '12px';
+cartCounter.style.display = 'none';
+cartIcon.parentElement.style.position = 'relative';
+cartIcon.parentElement.appendChild(cartCounter);
+
+productCards.forEach(card => {
+  const button = card.querySelector('.button-85');
+  const quantitySelector = document.createElement('div');
+  quantitySelector.classList.add('quantity-selector');
+
+  const decreaseButton = document.createElement('button');
+  decreaseButton.classList.add('decrease-quantity');
+  decreaseButton.textContent = '-';
+
+  const quantitySpan = document.createElement('span');
+  quantitySpan.classList.add('quantity');
+  quantitySpan.textContent = '1';
+
+  const increaseButton = document.createElement('button');
+  increaseButton.classList.add('increase-quantity');
+  increaseButton.textContent = '+';
+
+  quantitySelector.appendChild(decreaseButton);
+  quantitySelector.appendChild(quantitySpan);
+  quantitySelector.appendChild(increaseButton);
+  quantitySelector.style.display = 'flex';
+  quantitySelector.style.justifyContent = 'space-between';
+  quantitySelector.style.marginTop = '10px';
+  card.insertBefore(quantitySelector, button);
+
+  let quantity = 1;
+
+  decreaseButton.addEventListener('click', () => {
+    if (quantity > 1) {
+      quantity--;
+      quantitySpan.textContent = quantity;
+    }
+  });
+
+  increaseButton.addEventListener('click', () => {
+    quantity++;
+    quantitySpan.textContent = quantity;
+  });
+
+  button.addEventListener('click', () => {
+    cartCount += quantity;
+    cartCounter.textContent = cartCount;
+    cartCounter.style.display = 'block';
+    quantity = 1;
+    quantitySpan.textContent = quantity;
+    
+  });
+
+});
 });
 
