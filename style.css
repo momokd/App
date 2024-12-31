@@ -1,4 +1,7 @@
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0%;
   padding: 0;
   box-sizing: border-box;
@@ -13,6 +16,7 @@ header {
 .Welcome {
   display: flex;
 }
+
 .welcome-image {
   height: 2px;
   width: 50px;
@@ -27,15 +31,16 @@ header {
 
 
 .nav {
-    position: fixed;
-    top: 20;
-    
-    background-color: transparent; /* Assurez-vous que le fond est visible */
-    z-index: 1000; /* Assurez-vous que le nav est au-dessus des autres éléments */
+  position: fixed;
+  top: 20;
+  background-color: transparent;
+  z-index: 1000;
 }
+
 .container {
   display: flex;
 }
+
 .nav-text {
   font-size: 24px;
   font-weight: bold;
@@ -58,39 +63,47 @@ header {
   list-style: none;
   font-family: "Outfit", sans-serif;
 }
-.ul-nav > a {
+
+.ul-nav>a {
   text-decoration: none;
 }
-.ul-nav > li > a {
+
+.ul-nav>li>a {
   text-decoration: none;
   font-weight: bold;
   color: black;
 }
 
-.ul-nav > li > a:hover {
+.ul-nav>li>a:hover {
   color: rgb(9, 216, 244);
   text-transform: uppercase;
 }
+
 .li-home {
   padding-right: 60px;
 }
+
 .li-about {
   padding-right: 50px;
 }
+
 .li-products {
   padding-right: 60px;
 }
+
 .li-buildings {
   padding-right: 250px;
 }
+
 .video-background {
-position: absolute;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
 }
+
 .video-background video {
   position: absolute;
   top: 0;
@@ -111,11 +124,12 @@ position: absolute;
   text-align: center;
   color: white;
 }
-.section1-div > small {
+
+.section1-div>small {
   text-shadow: rgba(0, 0, 0, 0.9) 0px 0px 39px;
 }
 
-.section1-div > a {
+.section1-div>a {
   text-decoration: none;
   color: white;
   font-weight: bold;
@@ -183,11 +197,14 @@ position: absolute;
   animation: leSnake 1.5s ease-in-out;
   animation-iteration-count: infinite;
 }
+
 @keyframes leSnake {
+
   from,
   to {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(30px);
   }
@@ -224,6 +241,7 @@ position: absolute;
   will-change: box-shadow, transform;
   font-size: 18px;
 }
+
 .logSign p button:focus {
   box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
@@ -232,6 +250,7 @@ position: absolute;
 .logSign p button:active {
   box-shadow: #d6d6e7 0 3px 7px inset;
 }
+
 .location {
   display: flex;
   font-size: 20px;
@@ -240,38 +259,40 @@ position: absolute;
   margin-top: 20px;
 }
 
-.section2{
-    display: flex;
-    position: absolute;
-    top: 100%;
-    background-image: url(assets/Shallow\ waters.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 90vh;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
-    color: white;
-    font-size: 50px;
-    font-family: "Outfit", sans-serif;
-    text-align: center;
+.section2 {
+  display: flex;
+
+  margin-top: 62px;
+  margin-bottom: 62px;
+  background-image: url(assets/Shallow\ waters.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-size: 50px;
+  font-family: "Outfit", sans-serif;
+  text-align: center;
 }
 
 
 .section2 p {
-    font-size: 40px;
-    animation: leSnake 1.5s ease-in-out;
-    animation-iteration-count: infinite;
+  font-size: 40px;
+  animation: leSnake 1.5s ease-in-out;
+  animation-iteration-count: infinite;
 }
 
-.section2 div{
-    animation: leSnake 1.5s ease-in-out;
-    animation-iteration-count: infinite;
+.section2 div {
+  animation: leSnake 1.5s ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 @keyframes leMagnify {
-    50% {
-        transform: scale(0.9);
-        letter-spacing: 26px
-    }
+  50% {
+    transform: scale(0.9);
+    letter-spacing: 26px
+  }
 }
+

@@ -1,57 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>site d'app</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="footer.css" />
     <script type="module" src="app.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="Welcome">
-            <div class="welcome-image"><img src="assets/line-md--account.svg" alt=""></div>
-            <div class="welcome-text">Welcome to fishing_tech 4.0 website</div>
+      <div class="Welcome">
+        <div class="welcome-image">
+          <img src="assets/line-md--account.svg" alt="" />
         </div>
+        <div class="welcome-text">Welcome to fishing_tech 4.0 website</div>
+      </div>
     </header>
     <div>
-        <nav class="nav">
-            <div class="container">
-                <a class="nav-text" href="index.html">Fishing_tech</a>
-                <div class="div-nav">
-                    <ul class="ul-nav">
-                        <li class="li-home"><a href="">Home</a></li>
-                        <li class="li-about"><a href="">About</a></li>
-                        <li class="li-products"><a href="products.html">Products</a></li>
-                        <li class="li-buildings"><a href="">Buildings</a></li>
-                        <li><img src="" alt=""></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+      <nav class="nav">
+        <div class="container">
+          <a class="nav-text" href="index.html">Fishing_tech</a>
+          <div class="div-nav">
+            <ul class="ul-nav">
+              <li class="li-home"><a href="">Home</a></li>
+              <li class="li-about"><a href="">About</a></li>
+              <li class="li-products"><a href="products.html">Products</a></li>
+              <li class="li-buildings"><a href="">Buildings</a></li>
+              <li><img src="" alt="" /></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </div>
     <section class="section1">
-        <div class="video-background"><video src="assets/2405379-uhd_3840_2160_24fps.mp4" autoplay muted loop></video></div>
-        <div class="section1-div">
-            <small>Dear customers,</small>
-            <h1>Your satisfaction, our priority</h1>
-            <a href=""><button class="button">let's start</button></a>
-        </div>
-        <div class="logSign">
-            <a href="connexion.html"><p><button>connectez vous</button></p></a>
-            <p class="location"><img src="assets/line-md--map-marker-radius.svg" alt="">Esatic, Abidjan</p>
-            <a href="inscription.html"><p><button>Inscrivez vous</button></p></a>
-        </div>
-        
+      <div class="video-background">
+        <video
+          src="assets/2405379-uhd_3840_2160_24fps.mp4"
+          autoplay
+          muted
+          loop
+        ></video>
+      </div>
+      <div class="section1-div">
+        <small>Dear customers,</small>
+        <h1>Your satisfaction, our priority</h1>
+        <a href=""><button class="button">let's start</button></a>
+      </div>
+      <div class="logSign">
+        <a href="connexion.html"
+          ><p><button>connectez vous</button></p></a
+        >
+        <p class="location">
+          <img src="assets/line-md--map-marker-radius.svg" alt="" />Esatic,
+          Abidjan
+        </p>
+        <a href="inscription.html"
+          ><p><button>Inscrivez vous</button></p></a
+        >
+      </div>
     </section>
 
     <section class="section2">
-        <div><p> our marine animals sales site, we offer a wide variety of marine creatures to enhance your aquarium or marine habitat. From vibrant fish to exotic corals, our selection is curated to provide the best quality and diversity. Our team of experts ensures that all animals are healthy and well-cared for, so you can enjoy a thriving marine ecosystem. Explore our products and find the perfect additions to your underwater world.</p></div> 
-        <div><img src="assets/more fish images.jpg" alt=""></div>
+      <div>
+        <p>
+          our marine animals sales site, we offer a wide variety of marine
+          creatures to enhance your aquarium or marine habitat. From vibrant
+          fish to exotic corals, our selection is curated to provide the best
+          quality and diversity. Our team of experts ensures that all animals
+          are healthy and well-cared for, so you can enjoy a thriving marine
+          ecosystem. Explore our products and find the perfect additions to your
+          underwater world.
+        </p>
+      </div>
+      <div><img src="assets/more fish images.jpg" alt="" /></div>
     </section>
 
-    <footer>
-        
-    </footer>
-</body>
+    <div class="main">
+      <footer>
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+        </div>
+        <div class="zoom">
+          <ul class="social_icon">
+            <li>
+              <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            </li>
+            <li>
+              <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            </li>
+            <li>
+              <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+            </li>
+            <li>
+              <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            </li>
+          </ul>
+        </div>
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Team</a></li>
+        </ul>
+        <p>© Code with RizZ | All right reserved</p>
+      </footer>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
