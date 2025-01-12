@@ -264,7 +264,7 @@ header {
 
   margin-top: 62px;
   margin-bottom: 62px;
-  background-image: url(assets/Shallow\ waters.jpg);
+  background-image: url(assets/Wallpaper\ sailboat\ minimalism\ water\ sea.jpeg);
   background-size: cover;
   background-position: center;
   height: 90vh;
@@ -277,17 +277,19 @@ header {
   text-align: center;
 }
 
+.section2 div img {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+}
 
 .section2 p {
   font-size: 40px;
-  animation: leSnake 1.5s ease-in-out;
+  color: rgb(132, 210, 229);
   animation-iteration-count: infinite;
 }
 
-.section2 div {
-  animation: leSnake 1.5s ease-in-out;
-  animation-iteration-count: infinite;
-}
+
 
 @keyframes leMagnify {
   50% {

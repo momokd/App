@@ -82,7 +82,7 @@ body {
 }
 
 .product-card {
-    --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+    --background: linear-gradient(to left, #8da3f4 0%, #00b9e7 100%);
 
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -175,7 +175,7 @@ h3 {
             #fffb00,
             #48ff00,
             #00ffd5,
-            #002bff,
+            #003255,
             #7a00ff,
             #ff00c8,
             #ff0000);
