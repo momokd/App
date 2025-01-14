@@ -1,0 +1,98 @@
+body {
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    position: fixed;
+    top: 0px;
+    background-color: #41a7f5; 
+    width: 100%;
+    z-index: 1000; 
+}
+
+.container {
+    display: flex;
+}
+.nav-text {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    padding-top: 10px;
+    margin-left: 55px;
+}
+
+.nav-text span {
+    display: inline-block;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.div-nav {
+    margin-left: 30em;
+}
+
+.ul-nav {
+    display: flex;
+    list-style: none;
+    font-family: "Outfit", sans-serif;
+}
+
+.ul-nav > a {
+    text-decoration: none;
+}
+
+.ul-nav > li > a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.ul-nav > li > a:hover {
+    color: rgb(9, 216, 244);
+    text-transform: uppercase;
+}
+
+.li-home {
+    padding-right: 60px;
+}
+.li-about {
+    padding-right: 50px;
+}
+.li-products {
+    padding-right: 60px;
+}
+.li-buildings {
+    padding-right: 250px;
+}
+
+.cards-container{
+    gap: 15px;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 750px;
+    padding: 15px;
+    background: #f7ba2b;
+    background: var(--background);
+    text-align: center;
+}
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+.card-image img {
+    margin: 0;
+    width: 100%;
+    height: 100px;
+    border-radius: 8px;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="footer.css">
+    <title>Connectez-vous</title>
+  </head>
+  <body>
+    <div>
+      <nav class="nav">
+        <div class="container">
+          <a class="nav-text" href="index.html">Fishing_tech</a>
+          <div class="div-nav">
+            <ul class="ul-nav">
+              <li class="li-home"><a href="index.html">Home</a></li>
+              <li class="li-about"><a href="about.html">About</a></li>
+              <li class="li-products"><a href="products.html">Products</a></li>
+              <li class="li-buildings">
+                <a href="buildings.html">Buildings</a>
+              </li>
+            </ul>
+          </div>
+          <div></div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="cards-container">
+        <div class="card">
+            <div class="card-image">
+                <img src="assets/Chal fish image.jpg" alt="Fish 1">
+            </div>
+            <div class="card-content">
+                <h3>Fish 1</h3>
+                <p>Quantity: 10</p>
+                <p>Total Price: $100</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image">
+                <img src="fish2.jpg" alt="Fish 2">
+            </div>
+            <div class="card-content">
+                <h3>Fish 2</h3>
+                <p>Quantity: 5</p>
+                <p>Total Price: $50</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image">
+                <img src="fish3.jpg" alt="Fish 3">
+            </div>
+            <div class="card-content">
+                <h3>Fish 3</h3>
+                <p>Quantity: 8</p>
+                <p>Total Price: $80</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="main">
+      <footer>
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+        </div>
+        <div class="zoom">
+          <ul class="social_icon">
+            <li>
+              <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            </li>
+            <li>
+              <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            </li>
+            <li>
+              <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+            </li>
+            <li>
+              <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            </li>
+          </ul>
+        </div>
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Team</a></li>
+        </ul>
+        <p>© Code with RizZ | All right reserved</p>
+      </footer>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script>
+      const navText = document.querySelector(".nav-text");
+      const letters = navText.textContent.split("");
+      navText.textContent = "";
+
+      letters.forEach((letter, i) => {
+        const span = document.createElement("span");
+        span.textContent = letter;
+        navText.appendChild(span);
+      });
+
+      let currentIndex = 0;
+      const colors = ["red", "blue", "green", "orange", "purple"];
+
+      function animateLetters() {
+        const spans = navText.querySelectorAll("span");
+        spans.forEach((span, i) => {
+          span.style.transform = "scale(1)";
+          span.style.color = "black";
+        });
+
+        const currentSpan = spans[currentIndex];
+        currentSpan.style.transform = "scale(1.5)";
+        currentSpan.style.color = colors[currentIndex % colors.length];
+
+        currentIndex = (currentIndex + 1) % spans.length;
+        setTimeout(animateLetters, 500);
+      }
+
+      animateLetters();
+    </script>
+  </body>
+</html>
