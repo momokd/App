@@ -83,7 +83,6 @@ body {
     width: 750px;
     padding: 15px;
     background: #f7ba2b;
-    background: var(--background);
     text-align: center;
 }
 .card:hover {
