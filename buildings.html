@@ -3,10 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Products Page</title>
-    <link rel="stylesheet" href="products.css" />
+    <title>Buildings Page</title>
+    <link rel="stylesheet" href="building.css" />
     <link rel="stylesheet" href="footer.css" />
-    <script type="module" src="products.js"></script>
   </head>
   <body>
     <div>
@@ -266,7 +265,7 @@
           <li class="li-home"><a href="index.html">Accueil</a></li>
           <li class="li-about"><a href="">A propos</a></li>
           <li class="li-products"><a href="products.html">Produits</a></li>
-          <li class="li-buildings"><a href="buildings.html">Entrepots</a></li>
+          <li class="li-buildings"><a href="">Entrepots</a></li>
         </ul>
       </footer>
     </div>
@@ -278,5 +277,37 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+
+    <script>
+        const navText = document.querySelector(".nav-text");
+        const letters = navText.textContent.split("");
+        navText.textContent = "";
+  
+        letters.forEach((letter, i) => {
+          const span = document.createElement("span");
+          span.textContent = letter;
+          navText.appendChild(span);
+        });
+  
+        let currentIndex = 0;
+        const colors = ["red", "blue", "green", "orange", "purple"];
+  
+        function animateLetters() {
+          const spans = navText.querySelectorAll("span");
+          spans.forEach((span, i) => {
+            span.style.transform = "scale(1)";
+            span.style.color = "black";
+          });
+  
+          const currentSpan = spans[currentIndex];
+          currentSpan.style.transform = "scale(1.5)";
+          currentSpan.style.color = colors[currentIndex % colors.length];
+  
+          currentIndex = (currentIndex + 1) % spans.length;
+          setTimeout(animateLetters, 500);
+        }
+  
+        animateLetters();
+      </script>
   </body>
 </html>
