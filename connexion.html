@@ -27,7 +27,7 @@
 
     <div class="container1">
       <div class="heading">Connectez vous !</div>
-      <form action="" class="form">
+      <form action="" class="form" id="loginForm">
         <input
           required=""
           class="input"
@@ -165,6 +165,39 @@
       }
 
       animateLetters();
+
+
+      const form = document.getElementById('loginForm');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
+
+  try {
+    const response = await fetch('http://localhost:3000/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      const error = await response.text();
+      alert('Erreur : ' + error);
+    } else {
+      const result = await response.json();
+      alert('Connexion réussie. Token : ' + result.token);
+      window.location.href = 'index.html';
+    }
+  } catch (error) {
+    alert('Erreur réseau : ' + error.message);
+  }
+});
+
+
+
+
+
+
     </script>
   </body>
 </html>

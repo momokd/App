@@ -27,12 +27,12 @@
 
     <div class="container1">
       <div class="heading">Inscrivez vous !</div>
-      <form action="" class="form">
+      <form action="" class="form" id="registerForm">
         <input
           required=""
           class="input"
           type="text"
-          name="nom"
+          name="name"
           id="nom"
           placeholder="Nom"
         />
@@ -179,6 +179,36 @@
       }
 
       animateLetters();
+
+
+      const form = document.getElementById('registerForm');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    const response = await fetch('http://localhost:3000/register', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    const message = await response.text();
+    alert(message);
+
+    // Récupérer les informations depuis le Local Storage
+    const name = localStorage.getItem("name") || "Utilisateur";
+    const prenom = localStorage.getItem("prenom") || "";
+
+
+
+
+
+    window.location.href = 'index.html';
+        // Afficher les informations dans une section
+        const username = document.getElementById("username");
+    username.textContent = ` ${name} ${prenom} `;
+  });
+
+
     </script>
   </body>
 </html>
