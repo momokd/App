@@ -37,7 +37,7 @@
                 <p>Taille: 500m²</p>
                 <p>Localisation: Cocody</p>
             </div>
-            <button>Contactez-nous</button>
+            <button class = "card button">Contactez-nous</button>
         </div>
         <div class="card">
             <div class = "card-img"><img src="assets/entrepot (2).jpeg" alt="Warehouse 2" class="card-img"></div>
@@ -46,7 +46,7 @@
                 <p>Taille: 750m²</p>
                 <p>Localisation: Treichville</p>
             </div>
-            <button>Contactez-nous</button>
+            <button class = "card button">Contactez-nous</button>
         </div>
         <div class="card">
             <div class = "card-img"><img src="assets/entrepot (3).jpeg" alt="Warehouse 3" class="card-img"></div>
@@ -55,7 +55,7 @@
                 <p>Taille: 1000m²</p>
                 <p>Localisation: Adjame</p>
             </div>
-            <button>Contactez-nous</button>
+            <button class = "card button">Contactez-nous</button>
         </div>
         <div class="card">
             <div class = "card-img"><img src="assets/entrepot (4).jpeg" alt="Warehouse 3" class="card-img"></div>
@@ -64,7 +64,7 @@
                 <p>Taille: 1000m²</p>
                 <p>Localisation: Zone 4</p>
             </div>
-            <button>Contactez-nous</button>
+            <button class = "card button">Contactez-nous</button>
         </div>
         <div class="card">
             <div class = "card-img"><img src="assets/entrepot (5).jpeg" alt="Warehouse 3" class="card-img"></div>
@@ -73,7 +73,7 @@
                 <p>Taille: 1000m²</p>
                 <p>Localisation: Treichville</p>
             </div>
-            <button>Contactez-nous</button>
+            <button class = "card button">Contactez-nous</button>
         </div>
         <div class="card">
             <div class = "card-img"><img src="assets/entrepot (6).jpeg" alt="Warehouse 3" class="card-img"></div>
@@ -82,7 +82,7 @@
                 <p>Taille: 1000m²</p>
                 <p>Localisation: Koumassi</p>
             </div>
-            <button>Contactez-nous</button>
+            <button class = "card button">Contactez-nous</button>
         </div>
         <div class="card">
             <div class = "card-img"><img src="assets/entrepot (7).jpeg" alt="Warehouse 3" class="card-img"></div>
@@ -91,7 +91,7 @@
                 <p>Taille: 1000m²</p>
                 <p>Localisation: Port-Bouet</p>
             </div>
-            <button>Contactez-nous</button>
+            <button class = "card button">Contactez-nous</button>
         </div>
         <div class="card">
             <div class = "card-img"><img src="assets/entrepot (8).jpeg" alt="Warehouse 3" class="card-img"></div>
@@ -100,7 +100,7 @@
                 <p>Taille: 1000m²</p>
                 <p>Localisation: Abobo</p>
             </div>
-            <button>Contactez-nous</button>
+            <button class = "card button">Contactez-nous</button>
         </div>
     </div>
 
@@ -172,6 +172,52 @@
         }
   
         animateLetters();
+
+        const buttons = document.querySelectorAll(".card button");
+
+        buttons.forEach((button, index) => {
+          button.addEventListener("click", () => {
+            const cardContent = button.parentElement.querySelector(".card-content");
+            const ownerName = `Propriétaire ${index + 1}`;
+            const ownerNumber = `Numéro: 012345678${index}`;
+
+            const overlay = document.createElement("div");
+            overlay.classList.add("overlay");
+
+            const ownerInfo = document.createElement("div");
+            ownerInfo.classList.add("owner-info");
+            ownerInfo.innerHTML = `
+              <h3>${ownerName}</h3>
+              <p>${ownerNumber}</p>
+              <button class="close-btn">Fermer</button>
+            `;
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+            overlay.style.display = "flex";
+            overlay.style.justifyContent = "center";
+            overlay.style.alignItems = "center";
+
+            ownerInfo.style.backgroundColor = "white";
+            ownerInfo.style.padding = "20px";
+            ownerInfo.style.borderRadius = "10px";
+            ownerInfo.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.5)";
+            ownerInfo.style.textAlign = "center";
+            ownerInfo.style.fontFamily = "Arial, sans-serif";
+            ownerInfo.style.color = "#333";
+            ownerInfo.style.maxWidth = "300px";
+            overlay.appendChild(ownerInfo);
+            document.body.appendChild(overlay);
+
+            const closeBtn = ownerInfo.querySelector(".close-btn");
+            closeBtn.addEventListener("click", () => {
+              document.body.removeChild(overlay);
+            });
+          });
+        });
       </script>
   </body>
 </html>
